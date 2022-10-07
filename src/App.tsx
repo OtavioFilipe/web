@@ -1,4 +1,6 @@
+import * as Dialog from "@radix-ui/react-dialog";
 import { useEffect, useState } from "react";
+
 import "./styles/main.css";
 
 import logoImg from "./assets/Logo.svg";
@@ -49,7 +51,16 @@ function App() {
           );
         })}
       </div>
-      <AdBanner />
+      <Dialog.Root>
+        <AdBanner />
+        <Dialog.Portal>
+          <Dialog.Overlay />
+          <Dialog.Content>
+            <Dialog.Title>Publique um anúncio</Dialog.Title>
+            <Dialog.Content>ajksahksjas</Dialog.Content>
+          </Dialog.Content>
+        </Dialog.Portal>
+      </Dialog.Root>
     </div>
   );
 }
