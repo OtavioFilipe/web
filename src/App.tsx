@@ -6,6 +6,7 @@ import "./styles/main.css";
 import { GameController } from "phosphor-react";
 import logoImg from "./assets/Logo.svg";
 import { AdBanner } from "./components/AdBanner";
+import { Input } from "./components/Form/input";
 import { Gamebanner } from "./components/GameBanner";
 
 interface Game {
@@ -60,10 +61,12 @@ function App() {
             <Dialog.Title className="text-3xl font-black">
               Publique um anúncio
             </Dialog.Title>
-            <form>
-              <div>
-                <label htmlFor="game">Qual o game?</label>
-                <input
+            <form className="mt-8">
+              <div className="flex flex-col gap-2">
+                <label htmlFor="game" className="font-semibold">
+                  Qual o game?
+                </label>
+                <Input
                   id="game"
                   placeholder="Selecione o game que deseja jogar"
                 />
@@ -71,13 +74,13 @@ function App() {
 
               <div>
                 <label htmlFor="name">Seu nome (ou nickname)</label>
-                <input id="name" placeholder="Como te chamam dentro do game?" />
+                <Input id="name" placeholder="Como te chamam dentro do game?" />
               </div>
 
               <div>
                 <div>
                   <label htmlFor="yearsPlaying">Joga há quantos anos?</label>
-                  <input
+                  <Input
                     id="yearsPlaying"
                     type="number"
                     placeholder="Tudo bem ser ZERO"
@@ -85,7 +88,7 @@ function App() {
                 </div>
                 <div>
                   <label htmlFor="discord">Qual seu Discord?</label>
-                  <input id="discord" type="text" placeholder="Usuario#0000" />
+                  <Input id="discord" type="text" placeholder="Usuario#0000" />
                 </div>
 
                 <div>
@@ -95,15 +98,15 @@ function App() {
                   <div>
                     <label htmlFor="hourStart">Qual horário do dia?</label>
                     <div>
-                      <input id="hourStart" type="time" placeholder="De" />
-                      <input id="hourEnd" type="time" placeholder="Até" />
+                      <Input id="hourStart" type="time" placeholder="De" />
+                      <Input id="hourEnd" type="time" placeholder="Até" />
                     </div>
                   </div>
                 </div>
               </div>
 
               <div>
-                <input type="checkbox" />
+                <Input type="checkbox" />
                 Costumo me conectar ao chat de voz
               </div>
 
