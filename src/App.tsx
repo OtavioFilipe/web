@@ -61,7 +61,7 @@ function App() {
             <Dialog.Title className="text-3xl font-black">
               Publique um anúncio
             </Dialog.Title>
-            <form className="mt-8">
+            <form className="mt-8 flex flex-col gap-4">
               <div className="flex flex-col gap-2">
                 <label htmlFor="game" className="font-semibold">
                   Qual o game?
@@ -72,13 +72,13 @@ function App() {
                 />
               </div>
 
-              <div>
+              <div className="flex flex-col gap-2">
                 <label htmlFor="name">Seu nome (ou nickname)</label>
                 <Input id="name" placeholder="Como te chamam dentro do game?" />
               </div>
 
-              <div>
-                <div>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="flex flex-col gap-2">
                   <label htmlFor="yearsPlaying">Joga há quantos anos?</label>
                   <Input
                     id="yearsPlaying"
@@ -86,18 +86,28 @@ function App() {
                     placeholder="Tudo bem ser ZERO"
                   />
                 </div>
-                <div>
+                <div className="flex flex-col gap-2">
                   <label htmlFor="discord">Qual seu Discord?</label>
                   <Input id="discord" type="text" placeholder="Usuario#0000" />
                 </div>
 
-                <div>
-                  <div>
+                <div className="flex gap-6">
+                  <div className="flex flex-col gap-2">
                     <label htmlFor="weekDays">Quando costuma jogar?</label>
-                  </div>
-                  <div>
-                    <label htmlFor="hourStart">Qual horário do dia?</label>
+
                     <div>
+                      <button title="Domingo">D</button>
+                      <button title="Segunda">S</button>
+                      <button title="Terça">T</button>
+                      <button title="Quarta">Q</button>
+                      <button title="Quinta">Q</button>
+                      <button title="Sexta">S</button>
+                      <button title="Sábado">S</button>
+                    </div>
+                  </div>
+                  <div className="flex flex-col flex-1 gap-2">
+                    <label htmlFor="hourStart">Qual horário do dia?</label>
+                    <div className="grid grid-cols-2 gap-2">
                       <Input id="hourStart" type="time" placeholder="De" />
                       <Input id="hourEnd" type="time" placeholder="Até" />
                     </div>
