@@ -60,70 +60,61 @@ function App() {
             <Dialog.Title className="text-3xl font-black">
               Publique um anúncio
             </Dialog.Title>
-            <Dialog.Content>
-              <form>
+            <form>
+              <div>
+                <label htmlFor="game">Qual o game?</label>
+                <input
+                  id="game"
+                  placeholder="Selecione o game que deseja jogar"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="name">Seu nome (ou nickname)</label>
+                <input id="name" placeholder="Como te chamam dentro do game?" />
+              </div>
+
+              <div>
                 <div>
-                  <label htmlFor="game">Qual o game?</label>
+                  <label htmlFor="yearsPlaying">Joga há quantos anos?</label>
                   <input
-                    id="game"
-                    placeholder="Selecione o game que deseja jogar"
+                    id="yearsPlaying"
+                    type="number"
+                    placeholder="Tudo bem ser ZERO"
                   />
+                </div>
+                <div>
+                  <label htmlFor="discord">Qual seu Discord?</label>
+                  <input id="discord" type="text" placeholder="Usuario#0000" />
                 </div>
 
                 <div>
-                  <label htmlFor="name">Seu nome (ou nickname)</label>
-                  <input
-                    id="name"
-                    placeholder="Como te chamam dentro do game?"
-                  />
-                </div>
-
-                <div>
                   <div>
-                    <label htmlFor="yearsPlaying">Joga há quantos anos?</label>
-                    <input
-                      id="yearsPlaying"
-                      type="number"
-                      placeholder="Tudo bem ser ZERO"
-                    />
+                    <label htmlFor="weekDays">Quando costuma jogar?</label>
                   </div>
                   <div>
-                    <label htmlFor="discord">Qual seu Discord?</label>
-                    <input
-                      id="discord"
-                      type="text"
-                      placeholder="Usuario#0000"
-                    />
-                  </div>
-
-                  <div>
+                    <label htmlFor="hourStart">Qual horário do dia?</label>
                     <div>
-                      <label htmlFor="weekDays">Quando costuma jogar?</label>
-                    </div>
-                    <div>
-                      <label htmlFor="hourStart">Qual horário do dia?</label>
-                      <div>
-                        <input id="hourStart" type="time" placeholder="De" />
-                        <input id="hourEnd" type="time" placeholder="Até" />
-                      </div>
+                      <input id="hourStart" type="time" placeholder="De" />
+                      <input id="hourEnd" type="time" placeholder="Até" />
                     </div>
                   </div>
                 </div>
+              </div>
 
-                <div>
-                  <input type="checkbox" />
-                  Costumo me conectar ao chat de voz
-                </div>
+              <div>
+                <input type="checkbox" />
+                Costumo me conectar ao chat de voz
+              </div>
 
-                <footer>
-                  <button>Cancelar</button>
-                  <button type="submit">
-                    <GameController />
-                    Encontrar duo
-                  </button>
-                </footer>
-              </form>
-            </Dialog.Content>
+              <footer>
+                <button>Cancelar</button>
+                <button type="submit">
+                  <GameController />
+                  Encontrar duo
+                </button>
+              </footer>
+            </form>
           </Dialog.Content>
         </Dialog.Portal>
       </Dialog.Root>
